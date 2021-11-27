@@ -1,15 +1,17 @@
-import Nav from '../components/nav'
 import Footer from '../components/footer'
+import Nav from '../components/nav'
+import {useRouter} from 'next/router';
 
 export default function Score() {
+  const router = useRouter();
   return(
     <>
       <Nav />
       <div className="container pt-2 mt-14">
-        <h3 className="border-b mx-3 p-1 my-1.5">1학년 성적</h3>
+        <h3 className="border-b mx-3 p-1 my-2">1학년 성적</h3>
         <form method="post" action="">
           <div>
-            <h5 className="inline-block w-auto border-b ml-4 p-1 my-2">1학기</h5>
+            <h5 className="inline-block w-auto border-b ml-4 p-1 my-3">1학기</h5>
             <div className="flex flex-wrap justify-center">
               <div className="self-center mr-4">국어</div>
               <div className="check_score">
@@ -127,7 +129,7 @@ export default function Score() {
             </div>
           </div>
           <div>
-            <h5 className="inline-block w-auto border-b ml-4 p-1 my-2">2학기</h5>
+            <h5 className="inline-block w-auto border-b ml-4 p-1 my-3">2학기</h5>
             <div className="flex flex-wrap justify-center">
               <div className="self-center mr-4">국어</div>
               <div className="check_score">
@@ -244,13 +246,13 @@ export default function Score() {
               </div>
             </div>
           </div>
-            <div className="flex flex-wrap justify-center w-30 my-3">
-              <button type="button" name="" id="" className="py-1.5 px-2.5 border mx-2 rounded-lg">이전</button>
-              <button type="button" name="" id="" className="py-1.5 px-2.5 border mx-2 rounded-lg">다음</button>
+            <div className="flex flex-wrap justify-center w-30 my-3.5">
+              <button type="button" name="" id="" className="py-1.5 px-2.5 border mx-2 rounded-lg" onClick={() => router.back()}>이전</button>
+              <button type="button" name="" id="" className="py-1.5 px-2.5 border mx-2 rounded-lg" onClick={() => router.push("/score", )}>다음</button>
             </div>
         </form>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

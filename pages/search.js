@@ -1,13 +1,15 @@
 import School from '../components/school.js'
+import {useRouter} from 'next/router';
 
 export default function Search() {
   const data = {  }
+  const router = useRouter();
   return (
     <>
       <div className="fixed top-0 w-full">
         <nav className="navbar navbar-expand-lg navbar-light bg-light border-b">
           <div className="container-fluid container inline-block">
-            <div className="d-flex" id="navbarText">
+            <div className="d-flex" id="navbarText" onClick={() => router.back()}>
               <svg id="arrow-left" xmlns="http://www.w3.org/2000/svg" width="18" height="12.226" viewBox="0 0 18 12.226">
                 <path id="arrow-left-2" data-name="arrow-left" d="M21.672,11.376v2.161H7.809l3.5,3.5L9.785,18.569,3.672,12.456,9.785,6.343l1.528,1.528-3.5,3.5Z" transform="translate(-3.672 -6.343)" fill="#707070"/>
               </svg>
