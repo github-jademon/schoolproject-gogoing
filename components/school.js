@@ -11,7 +11,7 @@ export default function School(data) {
   return (
     <>
       {data.data.map(v => (
-        <Link key={v.sc_code} href={{pathname: '/sc_detail', query:{ code: v.sc_code}}} passHref>
+        <Link key={v.sc_code} href={{pathname: '/sc_detail', query:{code: v.sc_code}}} passHref>
           <div className="flex flex-wrap border-b-1 border-gray-300 py-2 justify-between border-t">
             <div className="flex-col pl-2">
               <div className="pb-1">
