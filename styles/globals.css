@@ -7,6 +7,9 @@
 .bg-color {
   background-color: #FEFEFE;
 }
+.hover-base-color:hover {
+  background-color: #707070 !important;
+}
 .search-box {
   background-color: #AAA;
 }
@@ -26,10 +29,6 @@ label {
   padding: 0 1px;
   margin: 0 2px;
   color: #707070;
-}
-
-select {
-  background-color: #fff;
 }
 
 select:checked {
