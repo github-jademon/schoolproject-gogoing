@@ -61,8 +61,9 @@ export default function Selement() {
             </div>
             <div className="my-2">
               <span className="text-base font-bold base-color mr-2">성별</span>
-              <input type="radio" value="0" name="gen" id="wom" /><label htmlFor="wom">여자</label>
-              <input type="radio" value="1" name="gen" id="man" /><label htmlFor="man">남자</label>
+              <input type="radio" value="0" name="gen" id="wm" /><label htmlFor="wm">공학</label>
+              <input type="radio" value="1" name="gen" id="w" /><label htmlFor="w">여고</label>
+              <input type="radio" value="2" name="gen" id="m" /><label htmlFor="man">남고</label>
             </div>
             <div className="my-1">
               <span className="text-base font-bold base-color mr-2">분류</span>
