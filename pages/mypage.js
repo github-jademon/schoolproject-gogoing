@@ -45,17 +45,19 @@ export default function Mypage() {
             <div className="flex-col self-center pr-2"></div>
           </div>
         </Link>
-        <div className="flex flex-wrap border-b border-gray-300 py-2 justify-between">
-          <div className="flex-col pl-2">
-            <div>
-              <p className="text-lg font-bold base-color m-0">진로 탐색 및 설정</p>
+        <Link href="/career">
+          <div className="flex flex-wrap border-b border-gray-300 py-2 justify-between">
+            <div className="flex-col pl-2">
+              <div>
+                <p className="text-lg font-bold base-color m-0">진로 탐색 및 설정</p>
+              </div>
+              <div>
+                <p className="text-base base-color m-0">진로 찾기</p>
+              </div>
             </div>
-            <div>
-              <p className="text-base base-color m-0">진로 찾기</p>
-            </div>
+            <div className="flex-col self-center pr-2"></div>
           </div>
-          <div className="flex-col self-center pr-2"></div>
-        </div>
+        </Link>
         <Link href="/">
           <div className="flex flex-wrap border-b border-gray-300 py-2 justify-between">
             <div className="flex-col pl-2">
