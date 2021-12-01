@@ -26,11 +26,11 @@ export default function SignUp() {
           <div><input type="password" id="pw_chk" className="w-60 border-b p-2 focus:outline-none" placeholder="비밀번호를 다시 입력해주세요" required /></div>
         </div>
         <div className="text-center m-4">
-          <div className="border rounded inline-block px-2 py-1 w-60 mt-8 hover-base-color hover:text-white base-color">
-            <Link href="/login">
+          <Link href="/login">
+            <div className="border rounded inline-block px-2 py-1 w-60 mt-8 hover-base-color hover:text-white base-color">
               <button type="button" className="font-semibold">회원가입</button>
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
