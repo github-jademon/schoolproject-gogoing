@@ -7,6 +7,7 @@ const fetcher = url => fetch(url).then(r => r.json())
 
 export default function Selement() {
   const { data, error } = useSWR('/api/school/search?page=1', fetcher)
+  const [region, setRegion] = useState('')
   const [filter, setFileter] = useState(false)
 
   if (error) return <span>서버와 연결중 오류가 발생했습니다.</span>
@@ -48,14 +49,25 @@ export default function Selement() {
             <div className="my-1">
               <span className="text-base font-bold base-color mr-2">위치</span>
               <span>
-                <select name="area" id="area" className="border-bottom outline-none">
+                <select name="area" id="area" onChange={(e) => setRegion(e.target.value)} className="border-bottom outline-none">
                   <option value="">-선택-</option>
-                  <option value="">서울</option>
-                  <option value="">서울</option>
-                  <option value="">서울</option>
-                  <option value="">서울</option>
-                  <option value="">서울</option>
-                  <option value="">서울</option>
+                  <option value="서울">서울</option>
+                  <option value="세종특별시">세종</option>
+                  <option value="">경기</option>
+                  <option value="">경북</option>
+                  <option value="">경남</option>
+                  <option value="">충북</option>
+                  <option value="">충남</option>
+                  <option value="">강원</option>
+                  <option value="">전북</option>
+                  <option value="">전남</option>
+                  <option value="">인천</option>
+                  <option value="">대전</option>
+                  <option value="">광주</option>
+                  <option value="">울산</option>
+                  <option value="">부산</option>
+                  <option value="">대구</option>
+                  <option value="">제주</option>
                 </select>
               </span>
             </div>
