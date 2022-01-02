@@ -3,23 +3,24 @@ import { Map, MapMarker } from 'react-kakao-maps-sdk'
 import Nav from '../components/nav'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Head from 'next/head'
 import useSWR from 'swr'
-import {useState} from 'react'
+// import Head from 'next/head'
+// import {useState} from 'react'
 // sc_lgtud sc_lggud
-import Script from 'next/script'
+// import Script from 'next/script'
 
 const fetcher = url => fetch(url).then(r => r.json())
 
 export default function scDetail() {
+  const router = useRouter()
   const { data, error } = useSWR(`/api/school/get?code=${router.query.code}`, fetcher)
-  const 
+  // const 
   
   if (error) return <span>서버와 연결중 오류가 발생했습니다.</span>
   if (!data) return <span>데이터를 받아올 수 없습니다.</span>
 
   
-  const kakaoKey = "57c64c7799e4e731a7661c5629f39abf"
+  // const kakaoKey = "57c64c7799e4e731a7661c5629f39abf"
   console.log(data)
   return (
     <>
@@ -98,14 +99,14 @@ export default function scDetail() {
           <div>
             {/* <div id="map" style="width:340px;height:280px;" className="m-auto border my-4"></div> */}
 
-            <Map
+            {/* <Map
               center={{ lat: 33.5563, lng: 126.79581 }}
               style={{ width: "100%", height: "360px" }}
             >
               <MapMarker position={{ lat: 33.55635, lng: 126.795841 }}>
                 <div style={{color:"#000"}}>Hello World!</div>
               </MapMarker>
-            </Map>
+            </Map> */}
           </div>
         </div>
       </div>
