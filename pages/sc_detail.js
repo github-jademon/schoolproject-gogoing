@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* global kakao */
 import { Map, MapMarker } from 'react-kakao-maps-sdk'
 import Nav from '../components/nav'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router';
 import useSWR from 'swr'
 // import Head from 'next/head'
 // import {useState} from 'react'
@@ -10,10 +11,10 @@ import useSWR from 'swr'
 // import Script from 'next/script'
 
 const fetcher = url => fetch(url).then(r => r.json())
+const router = useRouter();
+const { data, error } = useSWR(`/api/school/get?code=${router.query.code}`, fetcher)
 
 export default function scDetail() {
-  const router = useRouter()
-  const { data, error } = useSWR(`/api/school/get?code=${router.query.code}`, fetcher)
   // const 
   
   if (error) return <span>서버와 연결중 오류가 발생했습니다.</span>
