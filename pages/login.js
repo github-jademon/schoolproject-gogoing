@@ -1,4 +1,4 @@
-import Link from "next/Link";
+import Link from "next/link";
 import Nav from '../components/nav'
 import { useState } from 'react'
 

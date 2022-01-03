@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import School from './school'
 import useSWR from 'swr'
-import Link from "next/Link";
+import Link from "next/link";
 
 const fetcher = url => fetch(url).then(r => r.json())
 
